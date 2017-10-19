@@ -1,0 +1,16 @@
+<div><h2>My players</h2>
+    <div style="float:left; width:30%;">
+        <ul class="players">
+            <li data-ng-repeat="player in $ctrl.players"
+                data-ng-class="{'selected' :player.name === $ctrl.selectedPlayer.name}"
+                data-ng-click="$ctrl.onSelect(player)">
+                <span class="badge">{{player.id}}</span> {{player.name}}
+            </li>
+        </ul>
+    </div>
+
+    <div style="float:left; width:70%;">
+        <player-detail data-player="$ctrl.selectedPlayer"></player-detail>
+    </div>
+    <div style="clear:both;"></div>
+</div>
